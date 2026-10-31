@@ -1,0 +1,166 @@
+
+.process-section {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  overflow: hidden;
+}
+
+.process-section .section-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  text-align: left;
+  margin-left: 35px;
+}
+
+.process-section > h2 {
+  width: 100%;
+  margin: 0 35px 25px;
+  text-align: left;
+}
+
+.process-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.process-card {
+  position: relative;
+  min-height: 145px;
+  padding: 17px 15px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.035);
+  backdrop-filter: blur(14px);
+  transition: 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.process-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.process-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(150, 135, 230, 0.12);
+  color: #9585d8;
+}
+
+.process-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.process-number {
+  font-size: 19px;
+  font-weight: 500;
+  color: #a3a0b6;
+}
+
+.process-content {
+  padding-left: 8px;
+}
+
+.process-content h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #292735;
+}
+
+.process-content p {
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 0;
+  color: #777584;
+}
+
+.process-connector {
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  transform: translateY(-50%);
+}
+
+.process-connector span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #a99be9;
+}
+
+.process-connector span:last-child {
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid #a99be9;
+  border-right: 1.5px solid #a99be9;
+  border-radius: 0;
+  transform: rotate(45deg);
+  background: transparent;
+}
+
+@media (max-width: 1000px) {
+  .process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .process-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-section {
+    padding: 20px 0;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .process-card {
+    min-height: 140px;
+    padding: 14px 11px;
+  }
+
+  .process-top {
+    gap: 10px;
+  }
+
+  .process-content {
+    padding-left: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

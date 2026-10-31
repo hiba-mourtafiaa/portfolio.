@@ -1,0 +1,232 @@
+
+.featured-section {
+  position: relative;
+  padding: 45px 4% 65px;
+  background: transparent;
+  text-align: left;
+  overflow: hidden;
+}
+
+.featured-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.featured-heading h2 {
+  margin: 0;
+  color: #24232d;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+}
+
+.featured-heading p {
+  max-width: 480px;
+  margin: 10px 0 0;
+  color: #777986;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.featured-count {
+  padding: 9px 15px;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 30px;
+  background: rgba(255,255,255,0.35);
+  color: #777986;
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.75);
+  border-radius: 23px;
+  background: rgba(255,255,255,0.28);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 12px 35px rgba(70,65,100,0.06);
+  transition: 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(70,65,100,0.11);
+}
+
+.project-preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 245px;
+  margin: 12px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.project-number {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 2;
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+}
+
+.preview-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.preview-content h3 {
+  margin: 0;
+  color: white;
+  font-size: clamp(25px, 4vw, 42px);
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.preview-content span {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255,255,255,0.85);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.muze {
+  background: linear-gradient(135deg, #38251e, #79523e, #c19a72);
+}
+
+.travel {
+  background: linear-gradient(135deg, #182c40, #315b70, #b48d56);
+}
+
+.BITE{
+  background: linear-gradient(135deg, #F4B942, #D94F30, #252525);
+}
+
+.preview-circle {
+  position: absolute;
+  right: -55px;
+  bottom: -105px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.preview-small-circle {
+  position: absolute;
+  top: -65px;
+  left: -45px;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+}
+
+.project-info {
+  padding: 17px 22px 20px;
+}
+
+.project-category {
+  color: #9283d8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-info h3 {
+  margin: 9px 0;
+  color: #292833;
+  font-size: 20px;
+}
+
+.project-info > p {
+  max-width: 450px;
+  margin: 0;
+  color: #777986;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.project-tech span {
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.4);
+  color: #666575;
+  font-size: 10px;
+}
+
+.project-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(150,145,170,0.13);
+  color: #92909c;
+  font-size: 11px;
+}
+
+.project-arrow {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.65);
+  color: #292833;
+  font-size: 19px;
+}
+
+@media (max-width: 750px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-preview {
+    height: 210px;
+  }
+}
+
+@media (max-width: 450px) {
+  .featured-section {
+    padding: 35px 5%;
+  }
+
+  .featured-heading h2 {
+    font-size: 23px;
+  }
+
+  .project-info {
+    padding: 15px;
+  }
+}
